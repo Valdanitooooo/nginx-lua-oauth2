@@ -11,6 +11,7 @@ nginx module for oauth2 authentication
 
 3. put this in your nginx config
 
+```
     location /auth/ {
         resolver 8.8.8.8 8.8.4.4;
         lua_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
@@ -26,8 +27,11 @@ nginx module for oauth2 authentication
             })
         }
     }
+```
 
 4. enjoy.
 
-the current access_token / refresh_token can be obtained by reading the cookie "oauth2_access_token" or "oauth2_refresh_token"
+the current access_token / refresh_token can be obtained by reading 
+
+the cookie "oauth2_access_token" or "oauth2_refresh_token"
 
